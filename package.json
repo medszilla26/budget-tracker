@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/medszilla26/budget-tracker/issues"
   },
-  "homepage": "https://github.com/medszilla26/budget-tracker#readme"
+  "homepage": "https://github.com/medszilla26/budget-tracker#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
