@@ -1,5 +1,3 @@
-const { response } = require("express");
-
 let db;
 //create a new db request for "budget" database.
 const request = indexedDB.open("budget", 1);

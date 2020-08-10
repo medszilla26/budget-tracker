@@ -1,5 +1,3 @@
-const { response } = require("express");
-
 let transactions = [];
 let myChart;
 
@@ -63,7 +61,7 @@ function populateChart() {
 
   const ctx = document.getElementById("my-chart").getContext("2d");
 
-  myChart = new myChart(ctx, {
+  myChart = new Chart(ctx, {
     type: "line",
     data: {
       labels,
@@ -82,7 +80,7 @@ function populateChart() {
 function sendTransaction(isAdding) {
   const nameEl = document.querySelector("#t-name");
   const amountEl = document.querySelector("#t-amount");
-  const errorEl = document.querySelector("#form .error");
+  const errorEl = document.querySelector("form .error");
 
   // validate form
   if (nameEl.value === "" || amountEl.value === "") {
@@ -105,7 +103,7 @@ function sendTransaction(isAdding) {
   }
 
   // add to beginning of current array of data
-  transactions.unshift(transactions);
+  transactions.unshift(transaction);
 
   // re-run logic to populate ui with new record
   populateChart();
